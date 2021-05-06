@@ -6,19 +6,13 @@ let animatedImage = 0;
 
 let index = 0;
 
-const getAbsolutePath = () => {
-  const loc = window.location;
-  return loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
-}
-
-
 const next = () => {
   const first = index;
   const second = index === 0 ? images.length - 1 : index - 1;
   index = second;
   frontImage.classList.remove('img__animate');
-  frontImage.setAttribute('src', `${getAbsolutePath()}assets/${images[first]}`);
-  backImage.setAttribute('src', `${getAbsolutePath()}assets/${images[second]}`);
+  frontImage.setAttribute('src', `${window.location}assets/${images[first]}`);
+  backImage.setAttribute('src', `${window.location}assets/${images[second]}`);
   setTimeout(() => {
     frontImage.classList.add('img__animate');
   }, 10);
