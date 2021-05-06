@@ -17,7 +17,7 @@ const next = () => {
   }, 10);
   setTimeout(() => {
     next();
-  }, 1000);
+  }, 3000);
 }
 
 window.addEventListener('load', () =>{
