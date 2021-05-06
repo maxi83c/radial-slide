@@ -10,8 +10,8 @@ const next = () => {
   const second = index === 0 ? images.length - 1 : index - 1;
   index = second;
   frontImage.classList.remove('img__animate');
-  frontImage.setAttribute('src', `\\assets\\${images[first]}`);
-  backImage.setAttribute('src', `\\assets\\${images[second]}`);
+  frontImage.setAttribute('src', `/assets/${images[first]}`);
+  backImage.setAttribute('src', `/assets/${images[second]}`);
   setTimeout(() => {
     frontImage.classList.add('img__animate');
   }, 10);
